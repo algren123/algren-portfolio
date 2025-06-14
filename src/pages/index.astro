@@ -1,0 +1,391 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+//const projects = [
+//  {
+//    title: "Refinr AI",
+//    description: "A web application using OpenAI's API that acts as a digital Business Analyst and helps you refine your tickets. It is built using Next.JS 14, TypeScript, TailwindCSS, Vercel KV for database storage.",
+//    image: "/refinr.jpg",
+//    liveLink: "https://refinr.vercel.app/",
+//    githubLink: "https://github.com/algren123/refinr"
+//  },
+//  {
+//    title: "CashSnap",
+//    description: "CashSnap is a platform where users can log their income and expenses and get a visual report of where their money is going. It is made to be shareable which makes it easy to show financial advisors or accountants. It's built using SvelteKit and Supabase.",
+//    image: "/cashsnap.jpg",
+//    liveLink: "https://cashsnap.vercel.app/",
+//    githubLink: "https://github.com/algren123/cashsnap"
+//  },
+//  {
+//    title: "Protor",
+//    description: "A full-stack application created with the MERN stack together with NextJS. It is a public board where people can post requests for tradesmen services or professionals can create posts to advertise their services.",
+//    image: "/protor.JPG",
+//    liveLink: "https://protor.uk/",
+//    githubLink: "https://github.com/algren123/protor"
+//  }
+//];
+
+const experiences = [
+  {
+    title: "Senior Software Engineer",
+    company: "Sky Betting & Gaming",
+    period: "May 2023 - Present",
+    description: "Received an internal promotion after leading the technical revamp of one of Sky Vegas's main pages. I am now working across squads to help them with their technical challenges and to help them deliver value to the business. I am also part of the maintainers of our Inner Source repository."
+  },
+  {
+    title: "Software Engineer",
+    company: "Sky Betting & Gaming",
+    period: "January 2022 - May 2023",
+    description: "Taking on a new challenge and opportunity with Sky Betting & Gaming where I'll be working in the 2nd biggest tribe Sky Vegas. Working with cutting edge technology and dwelving into a new stack that includes Next.JS, TypeScript, AWS, Docker and many more."
+  },
+  {
+    title: "Junior Web Developer",
+    company: "Vertu Motors",
+    period: "February 2021 - December 2021",
+    description: "Working with Angular, TypeScript, JavaScript and of course HTML, CSS & SASS to maintain Vertu Motor's 14 websites. I had the opportunity to work on various different parts of software development, from fixing bugs on the websites, to creating a chatbot"
+  },
+  {
+    title: "Code Hero Volunteer",
+    company: "Cartea Daliei",
+    period: "March 2021 - September 2021",
+    description: "Cartea Daliei is a non-profit organization that works with children from Romania. I teach a class of 4 children aged between 11-12 the fundamentals of coding with Scratch. After 6 weeks of lessons, I have prepared them for a Hackathon-type project where they got to work together as a team and create an animation."
+  }
+];
+
+const techStack = {
+languages: ["HTML/CSS", "TypeScript", "JavaScript", "Java", "Python"],
+frameworks: ["Node", "Spring Boot", "React", "React Native", "Next.JS", "Expo", "GraphQL (+Apollo)"],
+middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
+};
+---
+
+<Layout 
+  title="Algren Pauna - Senior Software Engineer" 
+  description="Algren Pauna's personal portfolio where you can find his work, experience and contact. Senior Software Engineer specializing in TypeScript, React, Java and Python"
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+   <section class="h-100 py-28 flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 animate-fade-in">
+        <div class="w-full max-w-8xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-8 xl:col-span-7 space-y-8 lg:space-y-12">
+                    <div class="space-y-6">
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+                            Hi, I'm
+                            <span class="underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[10px] underline-offset-4">
+                                Algren
+                            </span>
+                        </h1>
+                    </div>
+                    
+                    <div class="space-y-6 animate-slide-up" style="animation-delay: 0.2s;">
+                        <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed lg:leading-relaxed">
+                            As a <span class="text-spotify-green font-semibold bg-spotify-green/10 px-2 py-1 rounded-md">senior software engineer</span>
+                        </h2>
+                        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-4xl">
+                            I thrive on discovering optimal solutions and pushing the boundaries of development.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">TypeScript</span><span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">Java</span><span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">Python</span>
+                            <span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">React</span>
+                            <span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">React Native</span>
+                            <span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">Node.js</span><span class="px-4 py-2 bg-gray-800 text-spotify-green border border-gray-700 rounded-full text-sm font-medium">Spring Boot</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4 animate-slide-up" style="animation-delay: 0.4s;">
+                        <a href="#experience" 
+                           class="inline-flex items-center gap-3 px-8 py-4 lg:px-12 lg:py-6 bg-spotify-green text-white font-bold text-lg lg:text-2xl rounded-xl hover:scale-105 hover:shadow-spotify transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-spotify-green focus:ring-offset-2 focus:ring-offset-dark-bg group">
+                            Get Started
+                            <svg class="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-4 xl:col-span-5 hidden lg:flex items-center justify-center">
+                    <div class="w-full max-w-md">
+                        <div class="aspect-square bg-gradient-to-br from-spotify-green/20 to-transparent rounded-3xl border border-spotify-green/30 flex items-center justify-center animate-slide-up" style="animation-delay: 0.6s;">
+                            <div class="text-spotify-green/50 text-6xl">
+                              <img src="images/laptop_wave.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <!--<section id="projects" class="py-16 px-8">-->
+    <!--  <h2 class="text-6xl lg:text-8xl font-bold text-center underline decoration-spotify-green decoration-8 lg:decoration-[12px] mb-16 animate-slide-up">-->
+    <!--    Projects-->
+    <!--  </h2>-->
+    <!--  <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">-->
+    <!--    {projects.map((project, index) => (-->
+    <!--      <div -->
+    <!--        class="w-full max-w-sm bg-dark-card rounded-lg shadow-card p-6 hover:-translate-y-2 transition-transform duration-300 animate-slide-up"-->
+    <!--        style={`animation-delay: ${index * 0.2}s`}-->
+    <!--      >-->
+    <!--        <img -->
+    <!--          src={project.image} -->
+    <!--          alt={project.title}-->
+    <!--          class="w-full h-40 object-cover rounded-lg mb-4"-->
+    <!--          loading="lazy"-->
+    <!--        />-->
+    <!--        <h3 class="text-xl font-semibold text-text-gray mb-4">{project.title}</h3>-->
+    <!--        <p class="text-white mb-6 leading-relaxed">{project.description}</p>-->
+    <!--        <div class="flex flex-wrap gap-2">-->
+    <!--          <a -->
+    <!--            href={project.liveLink}-->
+    <!--            target="_blank"-->
+    <!--            rel="noopener noreferrer"-->
+    <!--            class="px-4 py-2 bg-spotify-green text-white rounded-full text-sm font-medium hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-spotify-green"-->
+    <!--          >-->
+    <!--            Live Link-->
+    <!--          </a>-->
+    <!--          <a -->
+    <!--            href={project.githubLink}-->
+    <!--            target="_blank"-->
+    <!--            rel="noopener noreferrer"-->
+    <!--            class="px-4 py-2 bg-spotify-green text-white rounded-full text-sm font-medium hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-spotify-green"-->
+    <!--          >-->
+    <!--            GitHub Repo-->
+    <!--          </a>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    ))}-->
+    <!--  </div>-->
+    <!--</section>-->
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-8">
+      <h2 class="text-6xl lg:text-8xl font-bold text-center underline decoration-spotify-green decoration-8 lg:decoration-[12px] mb-16 animate-slide-up">
+        Work Experience
+      </h2>
+      <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+        {experiences.map((exp, index) => (
+          <div 
+            class="w-full max-w-sm bg-dark-card rounded-lg shadow-card p-6 hover:-translate-y-2 transition-transform duration-300 animate-slide-up"
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            <h3 class="text-xl font-semibold text-text-gray mb-2">{exp.title}</h3>
+            <h4 class="text-lg text-text-gray mb-1">{exp.company}</h4>
+            <h5 class="text-lg text-spotify-green font-semibold mb-4">{exp.period}</h5>
+            <p class="text-white leading-relaxed">{exp.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="techStack" class="py-20 lg:py-32 px-6 sm:px-8 lg:px-16 xl:px-24">
+        <!-- Section Header -->
+        <div class="text-center mb-20 lg:mb-16">
+            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 animate-slide-up">
+                Tech Stack
+            </h2>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+                The technologies and tools I use to bring ideas to life
+            </p>
+        </div>
+     <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Languages Card -->
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <!-- Card Header -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-spotify-green" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-spotify-green">Languages</h3>
+                    </div>
+                    <div class="space-y-2">
+            {techStack.languages.map(tech => (
+                        <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200">
+                            <div class="w-2 h-2 bg-spotify-green rounded-full"></div>
+                            <span class="text-gray-200 font-medium">{tech}</span>
+                        </div>
+            ))}
+                    </div>
+        </div>
+        <!-- Frameworks/Libs Card -->
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <!-- Card Header -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-spotify-green" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.5 9.5v-1c0-.83.67-1.5 1.5-1.5h12c.83 0 1.5.67 1.5 1.5v1c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-1c0-.28-.22-.5-.5-.5H6c-.28 0-.5.22-.5.5v1c0 .28-.22.5-.5.5s-.5-.22-.5-.5zm15 5v1c0 .83-.67 1.5-1.5 1.5H6c-.83 0-1.5-.67-1.5-1.5v-1c0-.28.22-.5.5-.5s.5.22.5.5v1c0 .28.22.5.5.5h12c.28 0 .5-.22.5-.5v-1c0-.28.22-.5.5-.5s.5.22.5.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-spotify-green">Frameworks/Libs</h3>
+                    </div>          <div class="space-y-4">
+            {techStack.frameworks.map(tech => (
+              <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200">
+                            <div class="w-2 h-2 bg-spotify-green rounded-full"></div>
+                            <span class="text-gray-200 font-medium">{tech}</span>
+                        </div>            ))}
+          </div>
+        </div>
+       <!-- Tools & DevOps Card -->
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up md:col-span-2 xl:col-span-1" style="animation-delay: 0.3s;">
+                    <!-- Card Header -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-spotify-green" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-spotify-green">Tools & DevOps</h3>
+                    </div>          <div class="space-y-4">
+            {techStack.middleware.map(tech => (
+<div class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200">
+                            <div class="w-2 h-2 bg-spotify-green rounded-full"></div>
+                            <span class="text-gray-200 font-medium">{tech}</span>
+                        </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+   <section id="contact" class="py-20 lg:py-32 px-6 sm:px-8 lg:px-16 xl:px-24">
+        <!-- Section Header -->
+        <div class="text-center mb-20 lg:mb-16">
+            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 animate-slide-up">
+                Let's Connect
+            </h2>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+                Ready to collaborate? Let's build something amazing together
+            </p>
+        </div>
+
+        <!-- Business Card Container -->
+        <div class="max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
+            <!-- Business Card -->
+            <div class="relative group">
+                <!-- Card Background with Gradient Border -->
+                <div class="absolute inset-0 bg-gradient-to-r from-spotify-green via-green-400 to-spotify-green rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                
+                <!-- Main Card -->
+                <div class="relative bg-dark-card border border-gray-800 rounded-3xl p-8 lg:p-12 hover:shadow-business-card hover:border-spotify-green/50 transition-all duration-500 animate-float">
+                    <!-- Card Header -->
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 lg:mb-12">
+                        <div class="mb-6 lg:mb-0">
+                            <h3 class="text-3xl lg:text-4xl font-bold text-white mb-2">Algren Pauna</h3>
+                            <p class="text-lg lg:text-xl text-spotify-green font-semibold">Senior Software Engineer</p>
+                        </div>
+                        
+                        <!-- Logo Area -->
+                        <div class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-spotify-green/20 to-transparent border-2 border-spotify-green/30 rounded-2xl flex items-center justify-center">
+                          <img src="images/envelope_greeting.png" />
+                        </div>
+                    </div>
+
+                    <!-- Contact Information Grid -->
+                    <div class="grid sm:grid-cols-1 gap-6 lg:gap-8">
+                        <!-- Email -->
+                        <div class="group/item flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover/item:bg-spotify-green/30 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-spotify-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-400 mb-1">Email</p>
+                                <a href="mailto:algren.pauna@gmail.com" 
+                                   class="text-white font-medium text-lg hover:text-spotify-green transition-colors duration-200 group-hover/item:text-spotify-green">
+                                    algren.pauna@gmail.com
+                                </a>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="group/item flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover/item:bg-spotify-green/30 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-spotify-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-400 mb-1">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/algren-pauna/" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="text-white font-medium text-lg hover:text-spotify-green transition-colors duration-200 group-hover/item:text-spotify-green">
+                                    Algren Pauna
+                                </a>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="group/item flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-800/50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover/item:bg-spotify-green/30 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-spotify-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-400 mb-1">GitHub</p>
+                                <a href="https://github.com/algren123" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="text-white font-medium text-lg hover:text-spotify-green transition-colors duration-200 group-hover/item:text-spotify-green">
+                                    algren123
+                                </a>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Bottom CTA -->
+                    <div class="mt-8 lg:mt-12 pt-8 border-t border-gray-800">
+                        <p class="text-center text-gray-400 text-sm lg:text-base">
+                            Available for new opportunities • 
+                            <span class="text-spotify-green font-medium">Open to collaborate</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 px-8 bg-dark-card text-spotify-green font-semibold text-sm mt-12">
+    Copyright 2024 Algren Pauna. All rights reserved.
+  </footer>
+</Layout>
+
+<script>
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+</script>

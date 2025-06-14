@@ -1,0 +1,47 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/jake.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Algren Pauna" />
+    <meta name="keywords" content="Algren Pauna, Senior Software Engineer, TypeScript, React, Next.js, Portfolio" />
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Algren Pauna",
+        "jobTitle": "Senior Software Engineer",
+        "description": "Senior Software Engineer specializing in TypeScript, React, and Node.js",
+        "url": "https://algrenpauna.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/algren-pauna/",
+          "https://github.com/algren123"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-dark-bg text-white font-poppins">
+    <slot />
+  </body>
+</html>
