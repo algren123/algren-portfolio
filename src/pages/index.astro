@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Analytics from "@vercel/analytics/next";
 
 //const projects = [
 //  {
@@ -369,6 +370,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
   <footer class="text-center py-8 px-8 bg-dark-card text-spotify-green font-semibold text-sm mt-12">
     Copyright 2024 Algren Pauna. All rights reserved.
   </footer>
+  <Analytics />
 </Layout>
 
 <script>
