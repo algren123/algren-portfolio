@@ -30,15 +30,15 @@ import Analytics from "@vercel/analytics/astro";
 const experiences = [
   {
     title: "Senior Software Engineer",
-    company: "Sky Betting & Gaming",
+    company: "Flutter UKI",
     period: "May 2023 - Present",
-    description: "Received an internal promotion after leading the technical revamp of one of Sky Vegas's main pages. I am now working across squads to help them with their technical challenges and to help them deliver value to the business. I am also part of the maintainers of our Inner Source repository."
+    description: "I have been part of two different squads during my time as a senior at Flutter UKI. In the Notflix Squad, I built and maintained an internal experimentation platform that enables A/B testing across the entire UK&I business using TypeScript and Java SDKs. In the Vulcan Squad, I technically led a personalisation project that integrated multiple services to deliver tailored content based on the user's preferences. I'm also a core maintainer of our inner-source repository, mentor engineers and graduates, and contribute to hiring decisions and technical training programs."
   },
   {
     title: "Software Engineer",
     company: "Sky Betting & Gaming",
     period: "January 2022 - May 2023",
-    description: "Taking on a new challenge and opportunity with Sky Betting & Gaming where I'll be working in the 2nd biggest tribe Sky Vegas. Working with cutting edge technology and dwelving into a new stack that includes Next.JS, TypeScript, AWS, Docker and many more."
+    description: "Joined Sky Betting & Gaming's Sky Vegas tribe, working with cutting-edge technology including Next.js, TypeScript, AWS, and Docker. Led the technical migration of a key business page from REST to GraphQL using Apollo, significantly improving data reliability, maintainability, and response times. Developed solutions compliant with Safer Gambling guidelines and contributed to knowledge sharing across the organization. This role ended in an internal promotion to Senior Software Engineer."
   },
   {
     title: "Junior Web Developer",
@@ -69,7 +69,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
   
   <main>
     <!-- Hero Section -->
-   <section class="h-100 py-28 flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 animate-fade-in">
+   <section class="h-100 py-28 flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 ">
         <div class="w-full max-w-8xl mx-auto">
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <div class="lg:col-span-8 xl:col-span-7 space-y-8 lg:space-y-12">
@@ -82,7 +82,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                         </h1>
                     </div>
                     
-                    <div class="space-y-6 animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="space-y-6 " style="animation-delay: 0.2s;">
                         <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed lg:leading-relaxed">
                             As a <span class="text-spotify-green font-semibold bg-spotify-green/10 px-2 py-1 rounded-md">senior software engineer</span>
                         </h2>
@@ -98,7 +98,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                         </div>
                     </div>
                     
-                    <div class="pt-4 animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="pt-4 " style="animation-delay: 0.4s;">
                         <a href="#experience" 
                            class="inline-flex items-center gap-3 px-8 py-4 lg:px-12 lg:py-6 bg-spotify-green text-white font-bold text-lg lg:text-2xl rounded-xl hover:scale-105 hover:shadow-spotify transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-spotify-green focus:ring-offset-2 focus:ring-offset-dark-bg group">
                             Get Started
@@ -111,7 +111,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                 
                 <div class="lg:col-span-4 xl:col-span-5 hidden lg:flex items-center justify-center">
                     <div class="w-full max-w-md">
-                        <div class="aspect-square bg-gradient-to-br from-spotify-green/20 to-transparent rounded-3xl border border-spotify-green/30 flex items-center justify-center animate-slide-up" style="animation-delay: 0.6s;">
+                        <div class="aspect-square bg-gradient-to-br from-spotify-green/20 to-transparent rounded-3xl border border-spotify-green/30 flex items-center justify-center " style="animation-delay: 0.6s;">
                             <div class="text-spotify-green/50 text-6xl">
                               <img src="images/laptop_wave.png" />
                             </div>
@@ -164,40 +164,71 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
     <!--</section>-->
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 px-8">
-      <h2 class="text-6xl lg:text-8xl font-bold text-center underline decoration-spotify-green decoration-8 lg:decoration-[12px] mb-16 animate-slide-up">
+   <section id="experience" class="py-20 lg:py-16 px-6 sm:px-8 lg:px-16 xl:px-24">
+  <!-- Background gradient overlay -->
+  
+  <div class="text-center mb-20 lg:mb-16">
+    <div class="py-20 lg:py-32 px-6 sm:px-8 lg:px-16 xl:px-24">
+      <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6">
         Work Experience
       </h2>
-      <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
-        {experiences.map((exp, index) => (
-          <div 
-            class="w-full max-w-sm bg-dark-card rounded-lg shadow-card p-6 hover:-translate-y-2 transition-transform duration-300 animate-slide-up"
-            style={`animation-delay: ${index * 0.1}s`}
-          >
-            <h3 class="text-xl font-semibold text-text-gray mb-2">{exp.title}</h3>
-            <h4 class="text-lg text-text-gray mb-1">{exp.company}</h4>
-            <h5 class="text-lg text-spotify-green font-semibold mb-4">{exp.period}</h5>
-            <p class="text-white leading-relaxed">{exp.description}</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      {experiences.map((exp, index) => (
+        <div 
+          class="group relative bg-gradient-to-br from-dark-card to-dark-card/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl p-8 border border-white/10 hover:border-spotify-green/30 overflow-hidden"
+        >
+          <!-- Subtle glow effect -->
+          <div class="absolute inset-0 bg-gradient-to-br from-spotify-green/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+          
+          <!-- Content -->
+          <div class="relative z-10">
+            <!-- Header with icon -->
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-spotify-green transition-colors duration-300">
+                  {exp.title}
+                </h3>
+                <h4 class="text-lg text-text-gray/90 mb-1 font-medium">{exp.company}</h4>
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 bg-spotify-green rounded-full"></div>
+                  <h5 class="text-spotify-green font-semibold tracking-wide">{exp.period}</h5>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="relative">
+              <p class="text-white/90 leading-relaxed text-sm lg:text-base">
+                {exp.description}
+              </p>
+              
+              <!-- Subtle accent line -->
+              <div class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-spotify-green/60 via-spotify-green/30 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
     <!-- Tech Stack Section -->
-    <section id="techStack" class="py-20 lg:py-32 px-6 sm:px-8 lg:px-16 xl:px-24">
+    <section id="techStack" class="py-20 lg:py-16 px-6 sm:px-8 lg:px-16 xl:px-24">
         <!-- Section Header -->
         <div class="text-center mb-20 lg:mb-16">
-            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 animate-slide-up">
+            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 ">
                 Tech Stack
             </h2>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed " style="animation-delay: 0.2s;">
                 The technologies and tools I use to bring ideas to life
             </p>
         </div>
      <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Languages Card -->
-                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 " style="animation-delay: 0.1s;">
                     <!-- Card Header -->
                     <div class="flex items-center gap-4 mb-8">
                         <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
@@ -217,7 +248,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                     </div>
         </div>
         <!-- Frameworks/Libs Card -->
-                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 " style="animation-delay: 0.2s;">
                     <!-- Card Header -->
                     <div class="flex items-center gap-4 mb-8">
                         <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
@@ -235,7 +266,7 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
           </div>
         </div>
        <!-- Tools & DevOps Card -->
-                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 animate-fade-in-up md:col-span-2 xl:col-span-1" style="animation-delay: 0.3s;">
+                <div class="group bg-dark-card border border-gray-800 rounded-2xl p-8 lg:p-10 hover:-translate-y-3 hover:shadow-card-hover hover:border-spotify-green/30 transition-all duration-500 md:col-span-2 xl:col-span-1" style="animation-delay: 0.3s;">
                     <!-- Card Header -->
                     <div class="flex items-center gap-4 mb-8">
                         <div class="w-12 h-12 bg-spotify-green/20 rounded-xl flex items-center justify-center group-hover:bg-spotify-green/30 transition-colors duration-300">
@@ -260,23 +291,23 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
    <section id="contact" class="py-20 lg:py-32 px-6 sm:px-8 lg:px-16 xl:px-24">
         <!-- Section Header -->
         <div class="text-center mb-20 lg:mb-32">
-            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 animate-slide-up">
+            <h2 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold underline decoration-spotify-green decoration-6 sm:decoration-8 lg:decoration-[12px] underline-offset-6 ">
                 Let's Connect
             </h2>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mt-8 max-w-3xl mx-auto leading-relaxed " style="animation-delay: 0.2s;">
                 Ready to collaborate? Let's build something amazing together
             </p>
         </div>
 
         <!-- Business Card Container -->
-        <div class="max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
+        <div class="max-w-2xl mx-auto " style="animation-delay: 0.4s;">
             <!-- Business Card -->
             <div class="relative group">
                 <!-- Card Background with Gradient Border -->
                 <div class="absolute inset-0 bg-gradient-to-r from-spotify-green via-green-400 to-spotify-green rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                 
                 <!-- Main Card -->
-                <div class="relative bg-dark-card border border-gray-800 rounded-3xl p-8 lg:p-12 hover:shadow-business-card hover:border-spotify-green/50 transition-all duration-500 animate-float">
+                <div class="relative bg-dark-card border border-gray-800 rounded-3xl p-8 lg:p-12 hover:shadow-business-card hover:border-spotify-green/50 transition-all duration-500 ">
                     <!-- Card Header -->
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 lg:mb-12">
                         <div class="mb-6 lg:mb-0">
@@ -307,9 +338,11 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                                 </a>
                             </div>
                             <div class="flex-shrink-0">
+                              <a href="mailto:algren.pauna@gmail.com">
                                 <svg class="w-4 h-4 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>
+                              </a>
                             </div>
                         </div>
 
@@ -330,9 +363,11 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                                 </a>
                             </div>
                             <div class="flex-shrink-0">
-                                <svg class="w-4 h-4 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <a href="https://www.linkedin.com/in/algren-pauna/" target="_blank">
+                              <svg class="w-4 h-4 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>
+                              </a>
                             </div>
                         </div>
 
@@ -353,9 +388,11 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
                                 </a>
                             </div>
                             <div class="flex-shrink-0">
+                              <a href="https://github.com/algren123" target="_blank">
                                 <svg class="w-4 h-4 text-gray-400 group-hover/item:text-spotify-green transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -378,22 +415,3 @@ middleware: ["AWS", "Docker", "Kafka", "Git", "Grafana", "Splunk", "Kuzzle"]
   </footer>
   <Analytics />
 </Layout>
-
-<script>
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-  });
-</script>
